@@ -1,0 +1,42 @@
+header {
+  position: fixed;
+  height: 90vh;
+  width: 190px;
+	top: 5%;
+  left: 15px;
+}
+nav {
+	border-radius: 15px;
+	background-color: #1D2537;
+	color: #7F89B0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	padding: 15px;
+	width: 100%;
+	height: 100%;
+}
+nav .boxTitle h1{
+	font-size: 1.4rem;
+}
+nav .boxLink {	
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 10px;
+	transition: all 0.2s ease-in-out;
+}
+nav .boxLink:hover {
+	border-radius: 10px;
+	background-color: #5c6370;
+	padding: 10px;
+	transition: all 0.2s ease-in-out;
+}
+nav .boxLink .navLink {
+	color: #7F89B0;
+	font-size: 1.1rem;
+	font-weight: 700;
+	margin-left: 10px;
+	text-decoration: none;
+}
