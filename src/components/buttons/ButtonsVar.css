@@ -1,0 +1,13 @@
+.buttonYellow {
+    background-color: transparent;
+    border: 1px solid #f7ce18;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+.buttonYellow:hover {
+    background-color: #f7ce18;
+    color: #464646;
+    transition: all 0.2s ease-in-out;
+}

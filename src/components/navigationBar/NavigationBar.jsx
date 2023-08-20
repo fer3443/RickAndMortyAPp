@@ -8,7 +8,7 @@ const NavigationBar = () => {
   const [ show, setShow ] = useState(false)
 
   return (
-    <header>
+    <header className="navbarContainer">
       <nav className={ show ? " nav hidden" : "nav"}>
         <div className="boxBtnBurger">
           <button className="btnBurger" onClick={()=> {

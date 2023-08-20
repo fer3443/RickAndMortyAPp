@@ -1,0 +1,16 @@
+.characterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 1rem 5rem;
+  color: #fff;
+}
+.cardsContainer {
+  margin: 1.5rem 0;  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

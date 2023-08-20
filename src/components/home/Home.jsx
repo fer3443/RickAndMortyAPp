@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="homeContainer">
       <section className="homeSection">
-      <CarrousellH/>
+        <CarrousellH />
         <h1>Rick and Morty App.</h1>
         <h5>
           ¡Bienvenidos al portal definitivo para todos los fanáticos de la
@@ -15,8 +15,8 @@ export default function Home() {
           aventuras interdimensionales, humor ácido y personajes excéntricos que
           te harán cuestionar la realidad misma.
         </h5>
-    </section>
+      </section>
+      <section></section>
     </div>
-
   );
 }
