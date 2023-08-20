@@ -1,0 +1,15 @@
+.homeContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 5rem;
+    color: #fff;
+}
+.homeSection h1{
+    text-align: center;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.homeSection h5 {
+    font-weight: normal;
+}

@@ -5,6 +5,7 @@ import EpisodePage from './pages/EpisodePage';
 import LocationPage from './pages/LocationPage';
 import ErrorPage from './pages/ErrorPage';
 import NavigationBar from './components/navigationBar/NavigationBar';
+import AboutPage from './pages/AboutPage';
 
 import './App.css'
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/characters' element={<CharacterPage/>}/>
         <Route path='/episodes' element={<EpisodePage/>}/>
         <Route path='/locations' element={<LocationPage/>} />
+        <Route path='/about' element={<AboutPage/>}/>
         <Route path='*' element={<ErrorPage/>}/>
       </Routes>
     </BrowserRouter>
