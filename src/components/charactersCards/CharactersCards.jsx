@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-// import Button from "react-bootstrap/Button";
-// import Card from "react-bootstrap/Card";
-
 import { getAllCharacters } from "../../services/ApiService";
 import { ButtonYellow } from "../buttons/ButtonsVar";
 
@@ -34,7 +31,7 @@ export const CharactersCards = () => {
               <p>Especie: {item.species}</p>
               <p>Genero: {item.gender}</p>
               <div className="cardFooter">
-                <ButtonYellow/>		
+              <button className='buttonYellow'>ver más!</button>
               </div>
             </div>
           </div>

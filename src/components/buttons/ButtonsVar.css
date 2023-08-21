@@ -5,6 +5,7 @@
     color: #fff;
     padding: 5px 10px;
     transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
 }
 .buttonYellow:hover {
     background-color: #f7ce18;

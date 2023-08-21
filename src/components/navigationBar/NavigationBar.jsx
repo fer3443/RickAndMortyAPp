@@ -5,7 +5,7 @@ import "../navigationBar/NavigationBar.css";
 
 const NavigationBar = () => {
   
-  const [ show, setShow ] = useState(false)
+  const [ show, setShow ] = useState(true)
 
   return (
     <header className="navbarContainer">

@@ -8,6 +8,7 @@
   display: flex;
   justify-content: space-between;
   margin: 1.2rem;
+  z-index: -1;
 }
 .cardContainer figure {
   width: 50%;
@@ -33,4 +34,18 @@
 }
 .cardBody p {
   font-size: 0.8rem;
+}
+.buttonYellow {
+  background-color: transparent;
+  border: 1px solid #f7ce18;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+.buttonYellow:hover {
+  background-color: #f7ce18;
+  color: #464646;
+  transition: all 0.2s ease-in-out;
 }
