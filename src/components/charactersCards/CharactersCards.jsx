@@ -21,7 +21,7 @@ export const CharactersCards = ({character}) => {
                 <p>Especie: {item.species}</p>
                 <p>Genero: {item.gender}</p>
                 <div className="cardFooter">
-                  <button>ver más</button>
+                  <button className="buttonYw">ver más</button>
                 </div>
               </div>
             </div>

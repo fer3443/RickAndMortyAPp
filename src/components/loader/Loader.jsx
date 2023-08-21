@@ -1,14 +1,13 @@
-import React, {useContext} from "react";
-import {motion} from 'framer-motion';
+import React, { useContext } from "react";
+import { motion } from "framer-motion";
 
 import { LoaderProvider } from "../../context/LoaderContext";
-import '../loader/Loader.css'
+import "../loader/Loader.css";
 export const Loader = () => {
-  
-  const { loading } = useContext(LoaderProvider)
-
+  const { loading } = useContext(LoaderProvider);
+ 
   return (
-    <motion.div animate={{opacity: loading ? 1 : 0}}>
+    <motion.div initial={{opacity: 1, scale: 1, y: 300}} animate={{opacity:0, scale:0.5 }} transition={{ duration: 0.5 }}>
       <div className="containerLoader">
         <figure>
           <img src="src/assets/loaderRick.png" alt="" />

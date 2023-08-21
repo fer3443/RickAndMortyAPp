@@ -2,19 +2,18 @@ import React, { useContext, useEffect, useState } from "react";
 
 import { Loader } from "../loader/Loader";
 import { LoaderProvider } from "../../context/LoaderContext";
+import { getEpisodesPage } from "../../services/ApiService";
+import { EpisodesTable } from "../episodesTable/EpisodesTable";
 
-import { CharactersCards } from "../charactersCards/CharactersCards";
-import { getAllCharactersPage } from "../../services/ApiService";
+import "../episodes/Episodes.css";
 
-import "../characters/Characters.css";
-
-export const Characters = () => {
+export const Episodes = () => {
   const { loading, setLoading } = useContext(LoaderProvider);
-  const [character, setCharacter] = useState([]);
+  const [episode, setEpisode] = useState([]);
   const [page, setPage] = useState(1);
 
   function nextPage() {
-    if (page == 42) {
+    if (page == 3) {
       setPage(1);
     } else {
       setPage(page + 1);
@@ -22,17 +21,16 @@ export const Characters = () => {
   }
   function prevPage() {
     if (page == 1) {
-      setPage(42);
+      setPage(3);
     } else {
       setPage(page - 1);
     }
   }
+
   useEffect(() => {
     setLoading(true);
-    getAllCharactersPage(page)
-      .then(({ results }) => {
-        setCharacter(results);
-      })
+    getEpisodesPage(page)
+      .then(({ results }) => setEpisode(results))
       .catch((err) => console.log(err))
       .finally(() => {
         setTimeout(() => {
@@ -42,19 +40,15 @@ export const Characters = () => {
   }, [page]);
 
   return (
-    <>
-      {loading ? (
-        <Loader />
-      ) : (
-        <div className="characterContainer">
-          <header className="characterHeader">
-            <h1>Personajes de la serie</h1>
+    <>{loading ? <Loader /> : <div className="episodesContainer">
+			<header className="episodesHeader">
+            <h1>Episodios de la serie</h1>
             <h3>
-              Aquí encontraras la lista completa de todos los personajes de la
+              Aquí encontraras la lista completa de todos los episodios de la
               serie con sus detalles!
             </h3>
           </header>
-          <div className="characterPageButtons">
+					<div className="episodesPageButtons">
             <button className="buttonYw" onClick={prevPage}>
               anterior
             </button>
@@ -62,10 +56,10 @@ export const Characters = () => {
               siguiente
             </button>
           </div>
-          <section className="cardsContainer">
-            <CharactersCards character={character} />
+					<section className="episodeGridContainer">
+            <EpisodesTable episode={episode}/>
           </section>
-          <div className="characterPageButtons">
+					<div className="episodesPageButtons">
             <button className="buttonYw" onClick={prevPage}>
               anterior
             </button>
@@ -73,8 +67,6 @@ export const Characters = () => {
               siguiente
             </button>
           </div>
-        </div>
-      )}
-    </>
+			</div>}</>
   );
 };
