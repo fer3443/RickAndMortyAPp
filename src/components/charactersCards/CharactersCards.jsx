@@ -1,40 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-import { getAllCharacters } from "../../services/ApiService";
-import { ButtonYellow } from "../buttons/ButtonsVar";
+import { motion } from "framer-motion";
 
 import "../charactersCards/CharactersCards.css";
 
-export const CharactersCards = () => {
-  const [character, setCharacter] = useState([]);
-
-  useEffect(() => {
-    getAllCharacters()
-      .then(({ results }) => {
-        console.log(results);
-        setCharacter(results);
-      })
-      .catch((err) => console.log(err));
-  }, []);
-
+export const CharactersCards = ({character}) => {
+  
   return (
     <>
       {character.map((item, index) => {
         return (
-          <div className="cardContainer" key={index}>
-            <figure>
-              <img className="cardImage" src={item.image} alt="" />
-            </figure>
-            <div className="cardBody">
-              <h4 className="cardName">{item.name}</h4>
-              <p>Estado: {item.status}</p>
-              <p>Especie: {item.species}</p>
-              <p>Genero: {item.gender}</p>
-              <div className="cardFooter">
-              <button className='buttonYellow'>ver más!</button>
+          <motion.div animate={{x:0, scale: 1 }} initial={{ x: 200, scale: 0 }} key={index}>
+            <div className="cardContainer">
+              <figure>
+                <img className="cardImage" src={item.image} alt="" />
+              </figure>
+              <div className="cardBody">
+                <h4 className="cardName">{item.name}</h4>
+                <p>Estado: {item.status}</p>
+                <p>Especie: {item.species}</p>
+                <p>Genero: {item.gender}</p>
+                <div className="cardFooter">
+                  <button>ver más</button>
+                </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         );
       })}
     </>
