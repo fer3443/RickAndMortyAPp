@@ -8,7 +8,6 @@
   display: flex;
   justify-content: space-between;
   margin: 1.2rem;
-  z-index: -1;
 }
 .cardContainer figure {
   width: 50%;
