@@ -1,8 +1,9 @@
 import React from 'react'
+import { Locations } from '../components/locations/Locations'
 
 const LocationPage = () => {
   return (
-    <div>LocationPage</div>
+    <Locations/>
   )
 }
 
