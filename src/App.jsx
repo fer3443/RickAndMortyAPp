@@ -6,6 +6,7 @@ import LocationPage from "./pages/LocationPage";
 import ErrorPage from "./pages/ErrorPage";
 import NavigationBar from "./components/navigationBar/NavigationBar";
 import AboutPage from "./pages/AboutPage";
+import CharacterPageDetail from "./pages/CharacterPageDetail";
 import { LoaderContext } from "./context/LoaderContext";
 
 import "./App.css";
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/characters" element={<CharacterPage />} />
+            <Route path="/characters/:id" element={<CharacterPageDetail/>}/>
             <Route path="/episodes" element={<EpisodePage />} />
             <Route path="/locations" element={<LocationPage />} />
             <Route path="/about" element={<AboutPage />} />

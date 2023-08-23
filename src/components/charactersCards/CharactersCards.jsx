@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../charactersCards/CharactersCards.css";
 export const CharactersCards = ({character}) => {
@@ -8,8 +9,8 @@ export const CharactersCards = ({character}) => {
       {
 			character.map((item, index) => {
         return (
-					<motion.div initial={{x:200, scale:0}} animate={{x:0, scale: 1}}>
-						<div className="cardContainer" key={index}>
+					<motion.div initial={{x:200, scale:0}} animate={{x:0, scale: 1}} key={index}>
+						<div className="cardContainer" >
             <figure>
               <img className="cardImage" src={item.image} alt="" />
             </figure>
@@ -18,7 +19,7 @@ export const CharactersCards = ({character}) => {
               <p>Estado: {item.status}</p>
               <p>Genero: {item.gender}</p>
               <p>Especie: {item.species}</p>
-              <button className="buttonYw">ver mas</button>
+              <Link to={`/characters/${item.id}`} className="buttonYw">ver mas</Link>
             </div>
           </div>
 					</motion.div>
