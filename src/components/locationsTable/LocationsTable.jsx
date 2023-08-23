@@ -10,9 +10,9 @@ export const LocationsTable = ({location}) => {
         <tr>
           <th>#</th>
           <th>Nombre</th>
-          <th>Publicado</th>
-          <th>Episodio</th>
-					<th>Creado</th>
+          <th>Tipo</th>
+          <th>Dimension</th>
+					<th>Residentes</th>
         </tr>
       </thead>
       <tbody>
@@ -20,11 +20,11 @@ export const LocationsTable = ({location}) => {
 					location.map((item,index) => {
 						return(
 						<tr key={index}>
-							<td>texto</td>
-							<td>texto</td>
-							<td>texto</td>
-							<td>texto</td>
-							<td>texto</td>
+							<td>{item.id}</td>
+							<td>Nombre: {item.name}</td>
+							<td>Tipo: {item.type}</td>
+							<td>Dimensión: {item.dimension}</td>
+							<td><button className='buttonYw2'>ver mas</button></td>
 						</tr>)
 					})
 				}

@@ -13,7 +13,7 @@ export const Locations = () => {
 	const [page, setPage] = useState(1);
 
 	function nextPage() {
-    if (page == 3) {
+    if (page == 7) {
       setPage(1);
     } else {
       setPage(page + 1);
@@ -21,7 +21,7 @@ export const Locations = () => {
   }
   function prevPage() {
     if (page == 1) {
-      setPage(3);
+      setPage(7);
     } else {
       setPage(page - 1);
     }
@@ -39,15 +39,15 @@ export const Locations = () => {
       });
   }, [page]);
   return (
-		<>{loading ? <Loader /> : <div className="episodesContainer">
-		<header className="episodesHeader">
+		<>{loading ? <Loader /> : <div className="locationsContainer">
+		<header className="locationsHeader">
 					<h1>Ubicaciones de la serie</h1>
 					<h3>
 						Aquí encontraras la lista completa de todos los ubicaciones de la
 						serie con sus detalles!
 					</h3>
 				</header>
-				<div className="episodesPageButtons">
+				<div className="locationsPageButtons">
 					<button className="buttonYw" onClick={prevPage}>
 						anterior
 					</button>
@@ -55,10 +55,10 @@ export const Locations = () => {
 						siguiente
 					</button>
 				</div>
-				<section className="episodeGridContainer">
+				<section className="locationGridContainer">
 					<LocationsTable location={location}/>
 				</section>
-				<div className="episodesPageButtons">
+				<div className="locationsPageButtons">
 					<button className="buttonYw" onClick={prevPage}>
 						anterior
 					</button>

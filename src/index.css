@@ -5,3 +5,31 @@ html {
 body {
   background-color: #2F2F2F;
 }
+.buttonYw {
+  background-color: transparent;
+  border: 1px solid #f7ce18;
+  border-radius: 5px;
+  color: #fff;
+  margin-left: 10px;
+  padding: 5px 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+.buttonYw:hover {
+  background-color: #f7ce18;
+  color: #464646;
+  transition: all 0.2s ease-in-out;
+}
+.buttonYw2 {
+  background-color: #f7ce18;
+  border: none;
+  border-radius: 5px;
+  color: #111;
+  margin-left: 10px;
+  padding: 5px 10px;
+  transition: background-color 0.2s ease-in-out;
+}
+.buttonYw2:hover {
+  background-color: #d9ff00;
+  color: #111;
+  transition: all 0.2s ease-in-out;
+}
