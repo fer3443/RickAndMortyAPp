@@ -10,6 +10,7 @@ import CharacterPageDetail from "./pages/CharacterPageDetail";
 import { LoaderContext } from "./context/LoaderContext";
 
 import "./App.css";
+import { HeaderApp } from "./components/header/HeaderApp";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <BrowserRouter>
         <LoaderContext>
           <NavigationBar />
+          <HeaderApp/>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/characters" element={<CharacterPage />} />

@@ -14,34 +14,43 @@ export const CharactersDetails = () => {
   const { loading, setLoading } = useContext(LoaderProvider);
 
   useEffect(() => {
-		setLoading(true)
+    setLoading(true);
     getCharacterById(id)
       .then((res) => {
         setCharacter(res);
       })
       .catch((err) => console.log(err))
-			.finally(() => {
+      .finally(() => {
         setTimeout(() => {
           setLoading(false);
         }, 500);
-			})
+      });
   }, []);
-
+	const {origin} = character
+	console.log(character.location)
   return (
-		<>
-		{ loading ? (<Loader/>) : <div className="detailsContainer">
-			<div className="detailCard">
-				<figure>
-					<img src={character.image} alt="" />
-					<div className="capa">
-						<div className="detailHead">
-						<h4>{character.name}</h4>
-						<p>Especifaciones</p>
-						</div>
-					</div>
-				</figure>
-			</div>
-			</div>}
-		</>
-	);
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <div className="detailsContainer">
+         <div className="detailsCard">
+				 <figure>
+            <img className="detailImg" src={character.image} alt="" />
+          </figure>
+          <div className="detailsBody">
+            <h4>{character.name}</h4>
+            <p>Estado: {character.status}</p>
+            <p>Genero: {character.gender}</p>
+            <p>Especie: {character.species}</p>
+						{
+							origin ? (<p>Origen: {origin.name}</p>) : <p>Origen: Desconocido</p>
+						}
+						<p>Creacion del personaje: {character.created}</p>
+          </div>
+				 </div>
+        </div>
+      )}
+    </>
+  );
 };

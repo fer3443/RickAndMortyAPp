@@ -1,0 +1,21 @@
+.headerAppContainer {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	padding: 15px 0;
+}
+.headerAppLink {
+	height: 100%;
+}
+.headerAppLink img {
+	width: 30rem;
+	height: 100%;
+	object-fit: contain;
+	transition: all 0.3s ease-in-out;
+}
+.headerAppLink img:hover {
+	filter: drop-shadow( 0 0 1rem #A2FFCE);
+	transition: all 0.3s ease-in-out;
+}
