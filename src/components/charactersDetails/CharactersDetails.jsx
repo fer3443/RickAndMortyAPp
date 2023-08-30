@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
 
 import { Loader } from "../loader/Loader";
+import { Footer } from "../footer/Footer";
 import { LoaderProvider } from "../../context/LoaderContext";
 
 import { getCharacterById } from "../../services/ApiService";
@@ -14,18 +15,14 @@ export const CharactersDetails = () => {
   const { loading, setLoading } = useContext(LoaderProvider);
 
   useEffect(() => {
-    setLoading(true);
+    
     getCharacterById(id)
       .then((res) => {
         setCharacter(res);
       })
       .catch((err) => console.log(err))
-      .finally(() => {
-        setTimeout(() => {
-          setLoading(false);
-        }, 500);
-      });
   }, []);
+  
 	const {origin} = character
 	console.log(character.location)
   return (
@@ -34,6 +31,9 @@ export const CharactersDetails = () => {
         <Loader />
       ) : (
         <div className="detailsContainer">
+          <div className="detailsBox">
+          <button className="btnBack">volver</button>
+          </div>
          <div className="detailsCard">
 				 <figure>
             <img className="detailImg" src={character.image} alt="" />
@@ -49,6 +49,7 @@ export const CharactersDetails = () => {
 						<p>Creacion del personaje: {character.created}</p>
           </div>
 				 </div>
+         <Footer/>
         </div>
       )}
     </>

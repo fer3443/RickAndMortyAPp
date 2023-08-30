@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 
 import { Loader } from "../loader/Loader";
+import { Footer } from "../footer/Footer";
 import { LoaderProvider } from "../../context/LoaderContext";
 import { getEpisodesPage } from "../../services/ApiService";
 import { EpisodesTable } from "../episodesTable/EpisodesTable";
@@ -40,15 +41,19 @@ export const Episodes = () => {
   }, [page]);
 
   return (
-    <>{loading ? <Loader /> : <div className="episodesContainer">
-			<header className="episodesHeader">
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <div className="episodesContainer">
+          <header className="episodesHeader">
             <h1>Episodios de la serie</h1>
             <h3>
               Aquí encontraras la lista completa de todos los episodios de la
               serie con sus detalles!
             </h3>
           </header>
-					<div className="episodesPageButtons">
+          <div className="episodesPageButtons">
             <button className="buttonYw" onClick={prevPage}>
               anterior
             </button>
@@ -56,10 +61,10 @@ export const Episodes = () => {
               siguiente
             </button>
           </div>
-					<section className="episodeGridContainer">
-            <EpisodesTable episode={episode}/>
+          <section className="episodeGridContainer">
+            <EpisodesTable episode={episode} />
           </section>
-					<div className="episodesPageButtons">
+          <div className="episodesPageButtons">
             <button className="buttonYw" onClick={prevPage}>
               anterior
             </button>
@@ -67,6 +72,9 @@ export const Episodes = () => {
               siguiente
             </button>
           </div>
-			</div>}</>
+          <Footer/>
+        </div>
+      )}
+    </>
   );
 };

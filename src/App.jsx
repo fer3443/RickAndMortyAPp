@@ -8,9 +8,9 @@ import NavigationBar from "./components/navigationBar/NavigationBar";
 import AboutPage from "./pages/AboutPage";
 import CharacterPageDetail from "./pages/CharacterPageDetail";
 import { LoaderContext } from "./context/LoaderContext";
+import { HeaderApp } from "./components/header/HeaderApp";
 
 import "./App.css";
-import { HeaderApp } from "./components/header/HeaderApp";
 
 function App() {
   return (

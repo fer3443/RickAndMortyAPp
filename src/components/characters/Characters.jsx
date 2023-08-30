@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 
 import { Loader } from "../loader/Loader";
+import { Footer } from "../footer/Footer";
 import { LoaderProvider } from "../../context/LoaderContext";
 
 import { CharactersCards } from "../charactersCards/CharactersCards";
@@ -12,7 +13,7 @@ export const Characters = () => {
   const { loading, setLoading } = useContext(LoaderProvider);
   const [character, setCharacter] = useState([]);
   const [page, setPage] = useState(1);
-
+  
   function nextPage() {
     if (page == 42) {
       setPage(1);
@@ -73,6 +74,7 @@ export const Characters = () => {
               siguiente
             </button>
           </div>
+          <Footer/>
         </div>
       )}
     </>

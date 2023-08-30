@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "../footer/Footer";
 
 import "../home/Home.css";
 import CarrousellH from "../carrousel/CarrousellH";
@@ -17,6 +18,7 @@ export default function Home() {
         </h5>
       </section>
       <section></section>
+      <Footer/>
     </div>
   );
 }
