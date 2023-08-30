@@ -7,25 +7,13 @@ import { LocationsTable } from "../locationsTable/LocationsTable";
 import { Footer } from "../footer/Footer";
 
 import "../locations/Locations.css";
+import { Pagination } from "../pagination/Pagination";
 export const Locations = () => {
   const { loading, setLoading } = useContext(LoaderProvider);
   const [location, setLocation] = useState([]);
+  const pageMin = 1;
+  const pageMax = 7;
   const [page, setPage] = useState(1);
-
-  function nextPage() {
-    if (page == 7) {
-      setPage(1);
-    } else {
-      setPage(page + 1);
-    }
-  }
-  function prevPage() {
-    if (page == 1) {
-      setPage(7);
-    } else {
-      setPage(page - 1);
-    }
-  }
 
   useEffect(() => {
     setLoading(true);
@@ -51,25 +39,11 @@ export const Locations = () => {
               serie con sus detalles!
             </h3>
           </header>
-          <div className="locationsPageButtons">
-            <button className="buttonYw" onClick={prevPage}>
-              anterior
-            </button>
-            <button className="buttonYw" onClick={nextPage}>
-              siguiente
-            </button>
-          </div>
+          <Pagination page={page} setPage={setPage} pageMin={pageMin} pageMax={pageMax}/>
           <section className="locationGridContainer">
             <LocationsTable location={location} />
           </section>
-          <div className="locationsPageButtons">
-            <button className="buttonYw" onClick={prevPage}>
-              anterior
-            </button>
-            <button className="buttonYw" onClick={nextPage}>
-              siguiente
-            </button>
-          </div>
+          <Pagination page={page} setPage={setPage} pageMin={pageMin} pageMax={pageMax}/>
 					<Footer/>
         </div>
       )}

@@ -8,26 +8,16 @@ import { CharactersCards } from "../charactersCards/CharactersCards";
 import { getAllCharactersPage } from "../../services/ApiService";
 
 import "../characters/Characters.css";
+import { Pagination } from "../pagination/Pagination";
 
 export const Characters = () => {
   const { loading, setLoading } = useContext(LoaderProvider);
   const [character, setCharacter] = useState([]);
-  const [page, setPage] = useState(1);
+  const pageMin = 1;
+  const pageMax = 42;
+  const [page, setPage] = useState(pageMin);
   
-  function nextPage() {
-    if (page == 42) {
-      setPage(1);
-    } else {
-      setPage(page + 1);
-    }
-  }
-  function prevPage() {
-    if (page == 1) {
-      setPage(42);
-    } else {
-      setPage(page - 1);
-    }
-  }
+  
   useEffect(() => {
     setLoading(true);
     getAllCharactersPage(page)
@@ -55,25 +45,11 @@ export const Characters = () => {
               serie con sus detalles!
             </h3>
           </header>
-          <div className="characterPageButtons">
-            <button className="buttonYw" onClick={prevPage}>
-              anterior
-            </button>
-            <button className="buttonYw" onClick={nextPage}>
-              siguiente
-            </button>
-          </div>
+          <Pagination page={page} setPage={setPage} pageMin={pageMin} pageMax={pageMax}/>
           <section className="cardsContainer">
             <CharactersCards character={character} />
           </section>
-          <div className="characterPageButtons">
-            <button className="buttonYw" onClick={prevPage}>
-              anterior
-            </button>
-            <button className="buttonYw" onClick={nextPage}>
-              siguiente
-            </button>
-          </div>
+         <Pagination page={page} setPage={setPage} pageMin={pageMin} pageMax={pageMax}/>
           <Footer/>
         </div>
       )}

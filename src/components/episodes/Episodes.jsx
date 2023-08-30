@@ -5,28 +5,16 @@ import { Footer } from "../footer/Footer";
 import { LoaderProvider } from "../../context/LoaderContext";
 import { getEpisodesPage } from "../../services/ApiService";
 import { EpisodesTable } from "../episodesTable/EpisodesTable";
+import { Pagination } from "../pagination/Pagination";
 
 import "../episodes/Episodes.css";
 
 export const Episodes = () => {
   const { loading, setLoading } = useContext(LoaderProvider);
   const [episode, setEpisode] = useState([]);
+  const pageMin = 1;
+  const pageMax = 3;
   const [page, setPage] = useState(1);
-
-  function nextPage() {
-    if (page == 3) {
-      setPage(1);
-    } else {
-      setPage(page + 1);
-    }
-  }
-  function prevPage() {
-    if (page == 1) {
-      setPage(3);
-    } else {
-      setPage(page - 1);
-    }
-  }
 
   useEffect(() => {
     setLoading(true);
@@ -53,25 +41,11 @@ export const Episodes = () => {
               serie con sus detalles!
             </h3>
           </header>
-          <div className="episodesPageButtons">
-            <button className="buttonYw" onClick={prevPage}>
-              anterior
-            </button>
-            <button className="buttonYw" onClick={nextPage}>
-              siguiente
-            </button>
-          </div>
+          <Pagination page={page} setPage={setPage} pageMin={pageMin} pageMax={pageMax}/>
           <section className="episodeGridContainer">
             <EpisodesTable episode={episode} />
           </section>
-          <div className="episodesPageButtons">
-            <button className="buttonYw" onClick={prevPage}>
-              anterior
-            </button>
-            <button className="buttonYw" onClick={nextPage}>
-              siguiente
-            </button>
-          </div>
+          <Pagination page={page} setPage={setPage} pageMin={pageMin} pageMax={pageMax}/>
           <Footer/>
         </div>
       )}
