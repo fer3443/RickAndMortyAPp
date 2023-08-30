@@ -12,10 +12,10 @@ export const CharactersCards = ({character}) => {
 					<motion.div initial={{x:200, scale:0}} animate={{x:0, scale: 1}} key={index}>
 						<div className="cardContainer" >
             <figure>
-              <img className="cardImage" src={item.image} alt="" />
+              <img className="cardImage" src={item.image} alt={item.name} title={item.name} />
             </figure>
             <div className="cardBody">
-              <h4>{item.name}</h4>
+              <h5>{item.name}</h5>
               <p>Estado: {item.status}</p>
               <p>Genero: {item.gender}</p>
               <p>Especie: {item.species}</p>
