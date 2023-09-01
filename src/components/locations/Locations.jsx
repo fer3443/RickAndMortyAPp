@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 
 import { Loader } from "../loader/Loader";
+import { HeaderApp } from "../header/HeaderApp";
 import { LoaderProvider } from "../../context/LoaderContext";
 import { getLocationsPage } from "../../services/ApiService";
 import { LocationsTable } from "../locationsTable/LocationsTable";
@@ -32,6 +33,7 @@ export const Locations = () => {
         <Loader />
       ) : (
         <div className="locationsContainer">
+          <HeaderApp/>
           <header className="locationsHeader">
             <h1>Ubicaciones de la serie</h1>
             <h3>
