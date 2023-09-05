@@ -14,3 +14,15 @@
 .homeSection h5 {
     font-weight: normal;
 }
+.trailersContainer {
+    padding: 1rem 0;
+    text-align: center;
+}
+.trailersSection {
+    padding: 1rem 5rem;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
