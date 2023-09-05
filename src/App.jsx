@@ -11,6 +11,7 @@ import { LoaderContext } from "./context/LoaderContext";
 
 
 import "./App.css";
+import { CharacterForPage } from "./pages/CharacterForPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/characters" element={<CharacterPage />} />
+            <Route path="/characters?page=:page" element={<CharacterForPage/>}/>
             <Route path="/characters/:id" element={<CharacterPageDetail/>}/>
             <Route path="/episodes" element={<EpisodePage />} />
             <Route path="/locations" element={<LocationPage />} />
