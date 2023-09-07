@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import '../pagination/Pagination.css'
 export const Pagination = ({page, setPage, pageMin, pageMax}) => {
+  if(page == null){
+    setPage(pageMin)
+  }
+  //para almacenar el numero de pagina en la SessionStorage
+  useEffect(() => {
+    sessionStorage.setItem("page", page.toString());
+  }, [page]);
+  //para recuperar el numero de pagina de la Sstorage
+  useEffect(() => {
+    const storedPage = sessionStorage.getItem("page");
+    if (storedPage) {
+      setPage(parseInt(storedPage, 10));//el 10 se utiliza para indicar que la cadena storedPage debe interpretarse como un número decimal estándar.
+    }
+  }, []);
+
 	function prevPageFive(){
 		if( page <= 3 ){
 			setPage(pageMax)
