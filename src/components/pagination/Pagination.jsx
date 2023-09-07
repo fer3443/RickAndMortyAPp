@@ -2,9 +2,6 @@ import React, { useEffect } from "react";
 
 import '../pagination/Pagination.css'
 export const Pagination = ({page, setPage, pageMin, pageMax}) => {
-  if(page == null){
-    setPage(pageMin)
-  }
   //para almacenar el numero de pagina en la SessionStorage
   useEffect(() => {
     sessionStorage.setItem("page", page.toString());

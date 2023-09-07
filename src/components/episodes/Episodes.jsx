@@ -15,8 +15,10 @@ export const Episodes = () => {
   const [episode, setEpisode] = useState([]);
   const pageMin = 1;
   const pageMax = 3;
-  const [page, setPage] = useState(1);
-
+  const [page, setPage] = useState(sessionStorage.getItem("page"));
+  if(page == null || page > pageMax){
+    setPage(pageMin)
+  }
   useEffect(() => {
     setLoading(true);
     getEpisodesPage(page)
