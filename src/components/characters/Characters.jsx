@@ -17,7 +17,7 @@ export const Characters = () => {
   const pageMin = 1;
   const pageMax = 42;
   const [page, setPage] = useState(sessionStorage.getItem("page"));
-    if(page ==null){
+    if(page ==null){//para no romper lectura de funcion toString en componente Pagination
       setPage(pageMin)
     }
   useEffect(() => {
