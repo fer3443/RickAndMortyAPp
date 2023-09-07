@@ -17,7 +17,9 @@ export const Characters = () => {
   const pageMin = 1;
   const pageMax = 42;
   const [page, setPage] = useState(sessionStorage.getItem("page"));
-    
+    if(page ==null){
+      setPage(pageMin)
+    }
   useEffect(() => {
     setLoading(true);
     getAllCharactersPage(page)
