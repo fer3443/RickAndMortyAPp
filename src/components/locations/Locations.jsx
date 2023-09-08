@@ -14,7 +14,10 @@ export const Locations = () => {
   const [location, setLocation] = useState([]);
   const pageMin = 1;
   const pageMax = 7;
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(sessionStorage.getItem("page"));
+  if(page == null || page > pageMax){
+    setPage(pageMin)
+  }
 
   useEffect(() => {
     setLoading(true);

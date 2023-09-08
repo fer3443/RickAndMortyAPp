@@ -19,7 +19,7 @@
   border: 1px solid #f7ce18;
   border-radius: 5px;
   color: #fff;
-  margin: 15px;
+  margin-bottom: 1.2rem;
   padding: 5px 10px;
 }
 .btnBack:hover {
@@ -31,28 +31,37 @@
 .detailsCard {
 	position: relative;
   background-color: #111;
-  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1rem #A2FFCE;
   border-radius: 5px;
-  width: 650px;
-  height: 400px;
+  width: 350px;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  margin: 1.2rem;
+  margin: 2rem 0;
 }
 .detailsContainer figure {
-  width: 50%;
+  width: 100%;
   position: relative;
-  top: -25px;
-  left: 20px;
+  top: -35px;
+  left: calc(50% - 130px);
 }
 .detailImg {
+  width: 260px;
 	border-radius: 5px;
 }
 .detailsBody {
-	width: 50%;
+	width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: flex-end;
-  padding: 10px 15px;
+  align-items: flex-start;
+  padding: 0.7rem 2rem;
+}
+.detailsBody h4{
+ margin-bottom: 15px;
+ font-weight: 700;
+}
+.detailCreation span{
+  font-size: 0.8rem;
 }
