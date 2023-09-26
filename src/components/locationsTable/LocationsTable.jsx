@@ -21,9 +21,9 @@ export const LocationsTable = ({location}) => {
 						return(
 						<tr key={index}>
 							<td>{item.id}</td>
-							<td>Nombre: {item.name}</td>
-							<td>Tipo: {item.type}</td>
-							<td>Dimensión: {item.dimension}</td>
+							<td>{item.name}</td>
+							<td>{item.type}</td>
+							<td>{item.dimension}</td>
 							<td><button className='buttonYw2'>ver mas</button></td>
 						</tr>)
 					})

@@ -44,10 +44,10 @@
   width: 100%;
   position: relative;
   top: -35px;
-  left: calc(50% - 130px);
+  left: calc(50% - 140px);
 }
 .detailImg {
-  width: 260px;
+  width: 280px;
 	border-radius: 5px;
 }
 .detailsBody {
