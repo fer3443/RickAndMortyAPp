@@ -84,15 +84,6 @@ export const CharactersDetails = () => {
                   <CharacterDetailEpisodes episodes={episodes} />
                 </Accordion.Body>
               </Accordion.Item>
-              <Accordion.Item eventKey="1">
-                <Accordion.Header>Accordion Item #2</Accordion.Header>
-                <Accordion.Body>
-
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </Accordion.Body>
-              </Accordion.Item>
             </Accordion>
           </div>
           <Footer />

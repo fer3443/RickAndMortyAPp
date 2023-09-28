@@ -47,3 +47,30 @@
 .linkSocial.ghub {
     background-color: #171515;
 }
+/*MediaQuery*/
+@media (max-width: 320px) {
+    .containerFooter {
+        width: 100vw;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border: 1px solid black;
+    }
+    .footerAbout {
+        width: 100vw;
+    }
+    .footerAbout span {
+        width: 100%;
+    }
+    .socials {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .socialTitle {
+        
+        width: 100%;
+    }
+}
