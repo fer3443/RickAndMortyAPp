@@ -5,7 +5,6 @@ import Accordion from "react-bootstrap/Accordion";
 import { motion } from "framer-motion";
 
 import { CharacterDetailEpisodes } from "../charactersDetailEpisodes/CharacterDetailEpisodes";
-import { HeaderApp } from "../header/HeaderApp";
 import { Loader } from "../loader/Loader";
 import { Footer } from "../footer/Footer";
 import { LoaderProvider } from "../../context/LoaderContext";
@@ -46,7 +45,9 @@ export const CharactersDetails = () => {
         <Loader />
       ) : (
         <div className="detailsContainer">
-          <HeaderApp />
+          <header className="headerCharacterDetail">
+            <h2>Más informacion sobre {character.name}</h2>
+          </header>
           <div className="detailsBox">
             <button onClick={handleNavigation} className="btnBack">
               volver

@@ -1,12 +1,16 @@
 .detailsContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100%;
   padding: 1rem 5rem;
 	color: #fff;
+}
+.headerCharacterDetail {
+  margin-top: 5rem;
+  height: 10vh;
 }
 .detailsBox {
   height: 10vh;

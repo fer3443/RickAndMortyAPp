@@ -1,13 +1,22 @@
-import React from "react";
+import React, {useState}from "react";
 
 import { motion } from "framer-motion";
-import { HeaderApp } from "../header/HeaderApp";
+
 import { Footer } from "../footer/Footer";
+
 import "../about/About.css";
+import { Loader } from "../loader/Loader";
 export const About = () => {
+  const [loading, setLoading] = useState(true);
+
+  setTimeout(() => {
+    setLoading(false);
+  }, 500);
   return (
-    <div className="containerAbout">
-      <HeaderApp />
+   <>
+     {
+      loading ? (<Loader/>) : (
+        <div className="containerAbout">
       <section className="sectionAbout">
         <article className="art1">
             <h2>Bienvenidos a todos los pepinillos Ricks!</h2>
@@ -53,5 +62,8 @@ export const About = () => {
       </section>
       <Footer />
     </div>
+      )
+    }
+   </>
   );
 };

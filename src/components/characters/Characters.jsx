@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 
 import { Loader } from "../loader/Loader";
-import { HeaderApp } from "../header/HeaderApp";
 import { Footer } from "../footer/Footer";
 import { LoaderProvider } from "../../context/LoaderContext";
 
@@ -40,7 +39,6 @@ export const Characters = () => {
         <Loader />
       ) : (
         <div className="characterContainer">
-          <HeaderApp />
           <header className="characterHeader">
             <h1>Personajes de la serie</h1>
             <h3>

@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 
 import { Loader } from "../loader/Loader";
-import { HeaderApp } from "../header/HeaderApp";
 import { Footer } from "../footer/Footer";
 import { LoaderProvider } from "../../context/LoaderContext";
 import { getEpisodesPage } from "../../services/ApiService";
@@ -37,7 +36,6 @@ export const Episodes = () => {
         <Loader />
       ) : (
         <div className="episodesContainer">
-          <HeaderApp/>
           <header className="episodesHeader">
             <h1>Episodios de la serie</h1>
             <h3>
