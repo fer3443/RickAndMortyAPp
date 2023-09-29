@@ -4,11 +4,10 @@ import { Link } from "react-router-dom";
 import "../navigationBar/NavigationBar.css";
 
 const NavigationBar = () => {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
 
   return (
     <header className="navbarContainer">
-      <nav className={show ? " nav hidden" : "nav"}>
         <div className="boxBtnBurger">
           <button
             className="btnBurger"
@@ -16,13 +15,10 @@ const NavigationBar = () => {
               setShow(!show);
             }}
           >
-            <box-icon
-              name="menu"
-              color="#f7ce18"
-              size="md"
-            ></box-icon>
+            <box-icon name="menu" color="#f7ce18" size="md"></box-icon>
           </button>
         </div>
+      <nav className={show ? " nav hidden" : "nav"}>
         <div className={show ? "boxlink hidden" : "boxLink"}>
           <box-icon
             name="home-alt-2"
