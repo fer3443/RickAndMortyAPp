@@ -6,15 +6,13 @@ import "../navigationBar/NavigationBar.css";
 
 const NavigationBar = () => {
   const [show, setShow] = useState(false);
-
+  const handleShow = () => setShow(!show)
   return (
     <header className="navbarContainer">
         <div className="boxBtnBurger">
           <button
             className="btnBurger"
-            onClick={() => {
-              setShow(!show);
-            }}
+            onClick={handleShow}
           >
             <box-icon name="menu" color="#f7ce18" size="md"></box-icon>
           </button>
@@ -30,7 +28,7 @@ const NavigationBar = () => {
             animation="flashing-hover"
             size="md"
           ></box-icon>
-          <Link to={"/"} className={"navLink"}>
+          <Link to={"/"} className={"navLink"} onClick={handleShow}>
             Inicio
           </Link>
         </div>
@@ -43,7 +41,7 @@ const NavigationBar = () => {
           ></box-icon>
           <Link
             to={"/characters"}
-            className={"navLink"}
+            className={"navLink"} onClick={handleShow}
           >
             Personajes
           </Link>
@@ -57,7 +55,7 @@ const NavigationBar = () => {
           ></box-icon>
           <Link
             to={"/episodes"}
-            className={"navLink"}
+            className={"navLink"} onClick={handleShow}
           >
             Episodios
           </Link>
@@ -71,7 +69,7 @@ const NavigationBar = () => {
           ></box-icon>
           <Link
             to={"/locations"}
-            className={"navLink"}
+            className={"navLink"} onClick={handleShow}
           >
             Ubicaciones
           </Link>
@@ -83,7 +81,7 @@ const NavigationBar = () => {
             animation="flashing-hover"
             size="md"
           ></box-icon>
-          <Link to={"/about"} className={"navLink"}>
+          <Link to={"/about"} className={"navLink"} onClick={handleShow}>
             Acerca de
           </Link>
         </div>

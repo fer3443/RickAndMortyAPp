@@ -58,6 +58,9 @@ nav {
   transition: all 0.3s ease-in-out;
 }
 @media (max-width:768px){
+  .navbarContainer {
+    justify-content: space-between;
+  }
   nav {
     background-color: #111;
     position: absolute;
@@ -85,5 +88,8 @@ nav {
   }
   .boxLink {
     margin-left: 1.5rem;
+  }
+  .boxLink .navLink {
+    width: 95px;
   }
 }
