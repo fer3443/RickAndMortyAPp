@@ -7,8 +7,18 @@ import "../navigationBar/NavigationBar.css";
 const NavigationBar = () => {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(!show)
+  const [ scrolling, setScrolling] = useState(false);
+
+  function handleBg(){
+    if(window.scrollY >= 10){
+      setScrolling(true)
+    }else{
+      setScrolling(false)
+    }
+  }
+  window.addEventListener("scroll", handleBg)
   return (
-    <header className="navbarContainer">
+    <header className={scrolling ? "navbarContainer bgDark" : "navbarContainer"}>
         <div className="boxBtnBurger">
           <button
             className="btnBurger"

@@ -1,15 +1,31 @@
 .homeContainer {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    padding: 1rem 5rem;
+    padding: 6rem 1rem 0;
     color: #fff;
+    background-image: linear-gradient(to bottom, #000, #2F2F2F);
+}
+.logoHome {
+    position: relative;
+    width: 350px;
+    top: -70px;
+    left: calc(50% - 200px);
+    filter: drop-shadow( 0 0 .5rem #A2FFCE);
+}
+.homeSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding: 0 2rem;
 }
 .homeSection h1{
-    text-align: center;
+    border-bottom: 1px solid #fff;
     font-weight: 500;
-    margin: 10px 0;
+    width: 100%;
 }
 .homeSection h5 {
     font-weight: normal;
