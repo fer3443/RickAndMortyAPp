@@ -1,7 +1,8 @@
 .containerPagination {
   margin: 10px 0;
   display: flex;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
   width: 370px;
   height: 50px;
 }
@@ -11,4 +12,12 @@
   font-size: 0.9rem;
   padding: 5px;
   text-align: center;
+}
+@media( 320px <= width <= 768px){
+  .containerPagination {
+    width: 100vw;
+  }
+  .numbersPage {
+    font-size: 0.9rem;
+  }
 }

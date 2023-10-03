@@ -36,3 +36,21 @@
 .cardBody p {
   font-size: 0.8rem;
 }
+@media( 320px <= width <= 768px ){
+  .cardContainer {
+    width: 310px;
+    height: 250px;
+  }
+  .cardContainer figure {
+    top: calc(50% - 75px);
+    left: 0;
+    padding-left: 5px;
+  }
+  .cardImage {
+    width: 150px;
+  }
+  .cardBody h5 {
+    width: 100%;
+    font-size: 1rem;
+  }
+}

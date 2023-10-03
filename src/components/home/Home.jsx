@@ -21,12 +21,12 @@ export default function Home() {
           <img src={logoHome} alt=""  className="logoHome"/>
           <section className="homeSection">
             <h1>Rick and Morty App.</h1>
-            <h5>
+            <h6>
               ¡Bienvenidos al portal definitivo para todos los fanáticos de la
               aclamada serie "Rick and Morty"! Sumérgete en un universo lleno de
               aventuras interdimensionales, humor ácido y personajes excéntricos
               que te harán cuestionar la realidad misma.
-            </h5>
+            </h6>
           </section>
           <section className="trailersContainer">
             <h4>Mirá un adelanto de cada una de las temporadas!</h4>

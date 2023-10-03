@@ -5,7 +5,7 @@
     border-top: 1px solid #fff;
     color: #fff;
     width: 100%;
-    height: 100px;
+    height: 150px;
     margin-top: 1rem;
     padding: 1rem 5.5rem;
 }
@@ -50,7 +50,7 @@
 /*MediaQuery*/
 @media (max-width: 768px) {
     .containerFooter {
-        width: 95vw;
+        width: 100%;
         height: auto;
         flex-direction: column;
         align-items: center;
@@ -67,17 +67,15 @@
     }
     .socials {
         width: 100%;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        margin-top: 5px;
+        margin-top: 10px;
     }
     .socialTilte {
         width: 50%;
     }
     .linksFooter {
-        width: 50%;
+        width: 100%;
         justify-content: space-evenly;
+        margin-bottom: 10px;
     }
     .linkSocial {
         width: 30px;

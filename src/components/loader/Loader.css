@@ -10,3 +10,13 @@
   z-index: 900;
   opacity: 1;
 }
+@media( 320px <= width <= 768px){
+  .containerLoader {
+    top: 0;
+    left: calc(50% -50vw);
+    width: 100%;
+  }
+  .containerLoader img{
+    width: 350px;
+  }
+}
