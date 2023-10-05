@@ -4,7 +4,7 @@ import { Footer } from "../footer/Footer";
 import logoHome from "../../assets/logoHome.png";
 import imgCharacters from "../../assets/imgCharacters.jpg";
 import imgEpisodes from "../../assets/imgEpisodes.jpeg";
-import imgLocations from "../../assets/imgLocations2.jpg"
+import imgLocations2 from "../../assets/imgLocations2.jpg";
 import { Loader } from "../loader/Loader";
 
 import "../home/Home.css";
@@ -74,7 +74,7 @@ export default function Home() {
               </div>
               <div className="cardLocation">
                 <figure>
-                  <img src={imgLocations} alt="" />
+                  <img src={imgLocations2} alt="" />
                 </figure>
                 <div className="cardParraph">
                   <h5>Ubicaciones</h5>
@@ -92,12 +92,104 @@ export default function Home() {
               </div>
             </div>
           </section>
+          <section className="sectionDivisor">
+          </section>
           <section className="sectionTrailers">
             <header className="headerTrailers">
               <h2>Trailers de temporadas</h2>
             </header>
             <div className="trailersContainer">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/BFTSrbB2wII?si=2U5TmE94d5sCyXUq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <div className="trailersBox">
+                <h6>
+                  Temporada 1
+                </h6>
+              <iframe
+                width="360"
+                height="215"
+                src="https://www.youtube.com/embed/BFTSrbB2wII?si=2U5TmE94d5sCyXUq"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+              </div>
+              <div className="trailersBox">
+                <h6>
+                  Temporada 2
+                </h6>
+              <iframe
+                width="360"
+                height="215"
+                src="https://www.youtube.com/embed/_IZfO_LfK5Q?si=DIrdyepxul1GhFC-"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+              </div>
+              <div className="trailersBox">
+                <h6>
+                  Temporada 3
+                </h6>
+              <iframe
+                width="360"
+                height="215"
+                src="https://www.youtube.com/embed/rLyOul8kau0?si=Vxi5ygw1SfncvX71"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+              </div>
+              <div className="trailersBox">
+                <h6>
+                  Temporada 4
+                </h6>
+              <iframe
+                width="360"
+                height="215"
+                src="https://www.youtube.com/embed/hl1U0bxTHbY?si=1D03sntsnh1v2cov"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+              </div>
+              <div className="trailersBox">
+                <h6>
+                  Temporada 5
+                </h6>
+              <iframe
+                width="360"
+                height="215"
+                src="https://www.youtube.com/embed/qbHYYXj2gMc?si=2P5LteNi5DQxsko4"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+              </div>
+              <div className="trailersBox">
+                <h6>
+                  Temporada 6
+                </h6>
+              <iframe
+                width="360"
+                height="215"
+                src="https://www.youtube.com/embed/P9WZhGMlDBE?si=p5_GOQzge-zhr9Yh"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+              </div>
+              <div className="trailersBox">
+                <h6>
+                  Temporada 7
+                </h6>
+              <iframe
+                width="360"
+                height="215"
+                src="https://www.youtube.com/embed/58-gZTQ36LU?si=MASKKMXkKCMlr_v4"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+              </div>
             </div>
           </section>
           <Footer />

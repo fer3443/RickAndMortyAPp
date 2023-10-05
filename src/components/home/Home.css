@@ -49,7 +49,7 @@
     position: absolute;
     top: -25px;
     width: auto;
-    background-color: #161616;
+    background-color: #0c0c0c;
     padding: 0 1.5rem;
 }
 .cardSection-section {
@@ -98,9 +98,17 @@
     border-radius: 5px;
     font-weight: 600;
 }
+.sectionDivisor {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    margin: 1rem 0;
+    background: url("../../assets/imgLocations.jpg") no-repeat center;
+    background-size: cover;
+}
 .sectionTrailers {
     width: 100%;
-    height: 100%;
+    height: auto;
     margin: 1.5rem 0;
 }
 .headerTrailers {
@@ -116,8 +124,23 @@
     position: absolute;
     top: -25px;
     width: auto;
-    background-color: #272727;
+    background-color: #1d1d1d;
     padding: 0 1.5rem;
+}
+.trailersContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.trailersContainer iframe:hover {
+    box-shadow: 0 0 1rem #A2FFCE;
+    transition: all 0.3s ease-in-out;
+}
+.trailersBox h6{
+    text-align: center;
+    margin-bottom: 10px;
 }
 @media(320px <= width <= 768px) {
     .homeContainer {
