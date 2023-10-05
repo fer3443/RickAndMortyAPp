@@ -3,10 +3,8 @@ import { motion } from "framer-motion";
 
 import rickLoader from '../../assets/loaderRick.png';
 
-import { LoaderProvider } from "../../context/LoaderContext";
 import "../loader/Loader.css";
 export const Loader = () => {
-  const { loading } = useContext(LoaderProvider);
  
   return (
     <div className="bgLoader">

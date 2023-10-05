@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Footer } from "../footer/Footer";
-import logoHome from "../../assets/logoHome.png"
+import logoHome from "../../assets/logoHome.png";
+import pruebaImg from "../../assets/pruebaImg.gif";
 import { Loader } from "../loader/Loader";
 
 import "../home/Home.css";
-
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -18,7 +19,7 @@ export default function Home() {
         <Loader />
       ) : (
         <div className="homeContainer">
-          <img src={logoHome} alt=""  className="logoHome"/>
+          <img src={logoHome} alt="" className="logoHome" />
           <section className="homeSection">
             <h1>Rick and Morty App.</h1>
             <h6>
@@ -28,17 +29,66 @@ export default function Home() {
               que te harán cuestionar la realidad misma.
             </h6>
           </section>
-          <section className="trailersContainer">
-            <h4>Mirá un adelanto de cada una de las temporadas!</h4>
-            <div className="trailersSection">
-          {/* <iframe width="450" height="315" src="https://www.youtube.com/embed/BFTSrbB2wII?si=VAQq2mRN_kG6-IJm" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-          <iframe width="450" height="315" src="https://www.youtube.com/embed/_IZfO_LfK5Q?si=DS2P6rXSgyFz08iE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-          <iframe width="450" height="315" src="https://www.youtube.com/embed/rLyOul8kau0?si=6pKLASls3pMm8UqD" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-          <iframe width="450" height="315" src="https://www.youtube.com/embed/hl1U0bxTHbY?si=D7xrED_ezdSFYh6m" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-          <iframe width="450" height="315" src="https://www.youtube.com/embed/fqbm1n5w2ls?si=X-PsWDovJ0tAtXJ0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-          <iframe width="450" height="315" src="https://www.youtube.com/embed/P9WZhGMlDBE?si=Zu1ZyHM6i-hRVdUJ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-          <iframe width="450" height="315" src="https://www.youtube.com/embed/IRUBwgy5T2Q?si=77Imfdr2IaytC7oI" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe> */}
-          </div>
+          <section className="cardSection">
+            <header className="cardSection-Header">
+              <h2>Secciones</h2>
+            </header>
+            <div className="cardSection-section">
+              <div className="cardCharacter">
+                <figure>
+                  <img src={pruebaImg} alt="" />
+                </figure>
+                <div className="cardParraph">
+                  <h5>Personajes</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nobis pariatur fuga optio! In quas unde quae natus aut id
+                    ducimus!
+                  </p>
+                </div>
+                <div className="seeMore">
+                  <Link to={"/characters"} className="cardSectionLinks">
+                    Ver más!
+                  </Link>
+                </div>
+              </div>
+              <div className="cardEpisode">
+                <figure>
+                  <img src={pruebaImg} alt="" />
+                </figure>
+                <div className="cardParraph">
+                  <h5>Episodios</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nobis pariatur fuga optio! In quas unde quae natus aut id
+                    ducimus!
+                  </p>
+                </div>
+                <div className="seeMore">
+                  <Link to={"/episodes"} className="cardSectionLinks">
+                    Ver más!
+                  </Link>
+                </div>
+              </div>
+              <div className="cardLocation">
+                <figure>
+                  <img src={pruebaImg} alt="" />
+                </figure>
+                <div className="cardParraph">
+                  <h5>Ubicaciones</h5>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Nobis pariatur fuga optio! In quas unde quae natus aut id
+                    ducimus!
+                  </p>
+                </div>
+                <div className="seeMore">
+                  <Link to={"/locations"} className="cardSectionLinks">
+                    Ver más!
+                  </Link>
+                </div>
+              </div>
+            </div>
           </section>
           <Footer />
         </div>
