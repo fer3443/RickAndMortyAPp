@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Footer } from "../footer/Footer";
 import logoHome from "../../assets/logoHome.png";
-import pruebaImg from "../../assets/pruebaImg.gif";
+import imgCharacters from "../../assets/imgCharacters.jpg";
+import imgEpisodes from "../../assets/imgEpisodes.jpeg";
+import imgLocations from "../../assets/imgLocations2.jpg"
 import { Loader } from "../loader/Loader";
 
 import "../home/Home.css";
@@ -36,7 +38,7 @@ export default function Home() {
             <div className="cardSection-section">
               <div className="cardCharacter">
                 <figure>
-                  <img src={pruebaImg} alt="" />
+                  <img src={imgCharacters} alt="" />
                 </figure>
                 <div className="cardParraph">
                   <h5>Personajes</h5>
@@ -54,7 +56,7 @@ export default function Home() {
               </div>
               <div className="cardEpisode">
                 <figure>
-                  <img src={pruebaImg} alt="" />
+                  <img src={imgEpisodes} alt="" />
                 </figure>
                 <div className="cardParraph">
                   <h5>Episodios</h5>
@@ -72,7 +74,7 @@ export default function Home() {
               </div>
               <div className="cardLocation">
                 <figure>
-                  <img src={pruebaImg} alt="" />
+                  <img src={imgLocations} alt="" />
                 </figure>
                 <div className="cardParraph">
                   <h5>Ubicaciones</h5>
@@ -88,6 +90,14 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
+            </div>
+          </section>
+          <section className="sectionTrailers">
+            <header className="headerTrailers">
+              <h2>Trailers de temporadas</h2>
+            </header>
+            <div className="trailersContainer">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BFTSrbB2wII?si=2U5TmE94d5sCyXUq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
           </section>
           <Footer />
