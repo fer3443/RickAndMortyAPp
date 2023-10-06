@@ -8,7 +8,7 @@ export const Loader = () => {
  
   return (
     <div className="bgLoader">
-      <motion.div initial={{opacity: 1, scale: 1, x:0, y: 300}} animate={{opacity:0, scale:0.5, x:0, y:300}} transition={{ duration: 0.4 }}>
+      <motion.div initial={{opacity: 1, scale: 1, x:0, y: 350}} animate={{opacity:0, scale:0.5, x:0, y:350}} transition={{ duration: 0.4 }}>
       <div className="containerLoader">
         <figure>
           <img src={rickLoader} alt="" />

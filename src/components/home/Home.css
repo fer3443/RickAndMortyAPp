@@ -157,4 +157,24 @@
         padding: 0 10px;
         justify-content: center;
     }
+    .cardSection-section {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .cardSection .cardCharacter, .cardEpisode, .cardLocation {
+        width: 100%;
+        margin: 1rem;
+    }
+    .cardSection-Header h2 {
+        background-color: #000;
+        top: -20px;
+    }
+    .headerTrailers h2 {
+        background-color: #1a1a1a;
+        padding: 5px;
+    }
+    .trailersContainer iframe {
+        width: 300px;
+    }
 }
