@@ -6,6 +6,7 @@
     height: 100%;
     padding: 6rem 5rem 0;
     color: #fff;
+    background-image: linear-gradient(to bottom, #000, #2F2F2F);
   }
   .episodesHeader h3 {
     font-weight: normal;
