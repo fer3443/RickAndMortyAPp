@@ -15,7 +15,7 @@
 }
 @media( 320px <= width <= 768px){
   .containerPagination {
-    width: 100vw;
+    width: 310px;
   }
   .numbersPage {
     font-size: 0.9rem;

@@ -73,7 +73,8 @@ export const CharactersDetails = () => {
                 <p>Origen: Desconocido</p>
               )}
               <p className="detailCreation">
-                Creacion del personaje: <span>{character.created}</span>
+                Creacion del personaje: <br/>
+                <span>{character.created}</span>
               </p>
             </div>
             <Accordion data-bs-theme="dark">

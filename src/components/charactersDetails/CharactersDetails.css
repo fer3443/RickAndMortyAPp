@@ -70,3 +70,20 @@
 .detailCreation span{
   font-size: 0.8rem;
 }
+@media (320px <= width <= 768px) {
+  .detailsContainer {
+    padding: 1rem ;
+  }
+  .headerCharacterDetail{
+    margin: 4rem 0;
+  }
+  .detailsCard {
+    width:300px;
+  }
+  .detailsContainer figure {
+   left: 25px;
+  }
+  .detailImg {
+    width: 85%;
+  }
+}
