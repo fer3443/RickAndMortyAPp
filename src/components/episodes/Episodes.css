@@ -13,5 +13,15 @@
     padding: 1rem 0;
   }
   .episodeGridContainer {
+    width: 100%;
     margin: 15px 0;
+  }
+  @media(320px <= width <= 768px){
+    .episodesContainer {
+      padding: 6rem 0 0;
+    }
+    .episodesHeader {
+      text-align: center;
+      padding: 0 1rem;
+    }
   }

@@ -24,3 +24,31 @@
 .parrafArt2 {
   width: 70%;
 }
+@media(320px <= width <= 768px){
+  .containerAbout {
+    padding: 5rem 0 0;
+  }
+  .art1, .art2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .art1 h2 {
+    text-align: center;
+  }
+  .titleArt1 {
+    width: 100%;
+    padding: 1rem;
+    flex-direction: column;
+  }
+  .art2 {
+    padding: 1rem;
+  }
+  .art2 h5 {
+    padding: .5rem 0;
+    filter: drop-shadow( 0 0 1rem #7cf8b6);
+  }
+  .parrafArt2{
+    width: 100%;
+  }
+}

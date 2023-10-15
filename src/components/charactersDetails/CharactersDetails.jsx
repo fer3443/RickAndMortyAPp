@@ -64,11 +64,11 @@ export const CharactersDetails = () => {
             </motion.div>
             <div className="detailsBody">
               <h4>{character.name}</h4>
-              <p>Estado: {character.status}</p>
-              <p>Genero: {character.gender}</p>
-              <p>Especie: {character.species}</p>
+              <p><span>Estado:</span> {character.status}</p>
+              <p><span>Genero:</span> {character.gender}</p>
+              <p><span>Especie:</span> {character.species}</p>
               {character.origin ? (
-                <p>Origen: {character.origin.name}</p>
+                <p><span>Origen:</span> {character.origin.name}</p>
               ) : (
                 <p>Origen: Desconocido</p>
               )}
