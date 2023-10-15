@@ -14,11 +14,14 @@
 }
 .locationGridContainer {
     margin: 15px 0;
-    width: 100%;
+    
   }
   @media(320px <= width <= 768px){
     .locationsContainer {
       padding: 6rem 0 0;
+    }
+    .locationGridContainer {
+      width: 100%;
     }
     .locationsHeader {
       text-align: center;
