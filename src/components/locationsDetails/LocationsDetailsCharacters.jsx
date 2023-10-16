@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import {
-  getCharacterById,
   getCharactersByUrl,
 } from "../../services/ApiService";
 
@@ -9,13 +8,16 @@ import "../locationsDetails/LocationsDetails.css";
 export const LocationsDetailsCharacters = ({ personajes }) => {
   const [data, setData] = useState([]);
   const [colors, setColors] = useState([]);
+  const [ loading, setLoading] = useState(false);
   useEffect(() => {
+    
     async function fetchData(array) {
       const arrayElementos = [];
       const arrayColores = [];
 
       for (const item of array) {
         try {
+          setLoading(true)
           const res = await getCharactersByUrl(item);
           arrayElementos.push(res);
 
@@ -35,6 +37,7 @@ export const LocationsDetailsCharacters = ({ personajes }) => {
       }
       setData(arrayElementos);
       setColors(arrayColores);
+      setLoading(false)
     }
     fetchData(personajes);
   }, [personajes]);
@@ -42,6 +45,9 @@ export const LocationsDetailsCharacters = ({ personajes }) => {
   return (
     <>
       <div className="containerDetailsLC">
+        {
+          loading && (<span>cargando personajes...</span>) 
+        }
         {data.map((item, index) => {
           const count = index + 1;
           const color = colors[index];
