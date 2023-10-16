@@ -36,11 +36,15 @@ export const LocationsDetails = () => {
       ) : (
         <section className="locationsDetailContainer">
           <h1>{location.name}</h1>
-          <button onClick={handleNavigation}>Volver</button>
+          <button onClick={handleNavigation} className="buttonYw">Volver</button>
           <div className="locationBody">
             <h3>Personajes observados en esta ubicación:</h3>
             <p>cantidad de personajes: {personajes.length}</p>
-            <LocationsDetailsCharacters personajes={personajes} />
+            {personajes.length == 0 ? (
+              <h4>No hay pesonajes para mostrar</h4>
+            ) : (
+              <LocationsDetailsCharacters personajes={personajes} />
+            )}
           </div>
         </section>
       )}
