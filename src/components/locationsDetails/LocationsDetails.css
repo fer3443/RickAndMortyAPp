@@ -1,7 +1,7 @@
 .locationsDetailContainer {
     background-image: linear-gradient(to bottom, #000, #2F2F2F);
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding-top: 5rem;
     color: #fff;
     display: flex;
@@ -22,6 +22,7 @@
 }
 /*LocationDetailsCharacters*/
 .containerDetailsLC {
+    width: 100%;
     display: grid;
     gap: 8px;
     grid-template-columns: repeat(3, 1fr);
@@ -49,4 +50,59 @@
 .imgLocationDetail {
     border-radius: 5px;
     width: 100px;
+}
+@media(320px <= width <= 425px){
+    .locationBody {
+        padding: .5rem;
+    }
+    .containerDetailsLC{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .cardContainerDetailLc{
+        width: 100%;
+        height: 140px;
+    }
+    .cardContainerDetailLc h5{
+        font-size: .9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 40vw;
+    }
+    .nameStatus h6 {
+        font-size: .9rem;
+    }
+}
+@media( 426px <= width <= 768px){
+    .locationBody {
+        padding: 0;
+    }
+    .containerDetailsLC{
+        place-items: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cardContainerDetailLc{
+        width: 95%;
+        height: 140px;
+    }
+    .cardContainerDetailLc h5{
+        font-size: 1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 120px;
+    }
+    .nameStatus {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .nameStatus h6 {
+        font-size: .9rem;
+    }
+    .imgLocationDetail {
+        width: 15vw;
+    }
 }

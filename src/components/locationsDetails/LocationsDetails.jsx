@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { getCharacterById, getLocationById } from "../../services/ApiService";
 import { LoaderProvider } from "../../context/LoaderContext";
 import { Loader } from "../loader/Loader";
+import {Footer} from "../footer/Footer"
 
 import "../locationsDetails/LocationsDetails.css";
 import { LocationsDetailsCharacters } from "./LocationsDetailsCharacters";
@@ -34,7 +35,8 @@ export const LocationsDetails = () => {
       {loading ? (
         <Loader />
       ) : (
-        <section className="locationsDetailContainer">
+        <div className="containerDetailGral">
+          <section className="locationsDetailContainer">
           <h1>{location.name}</h1>
           <button onClick={handleNavigation} className="buttonYw">Volver</button>
           <div className="locationBody">
@@ -47,6 +49,8 @@ export const LocationsDetails = () => {
             )}
           </div>
         </section>
+        <Footer/>
+        </div>
       )}
     </>
   );
