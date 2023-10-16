@@ -1,0 +1,16 @@
+.locationsDetailContainer {
+    background-image: linear-gradient(to bottom, #000, #2F2F2F);
+    width: 100%;
+    height: 100vh;
+    padding-top: 5rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.locationBody {
+    width: 100%;
+    display: grid;
+    place-content: center;
+
+}

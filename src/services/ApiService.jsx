@@ -8,6 +8,11 @@ export async function getCharacterById(id){
     return await results.json()
 }
 
+export async function getCharactersByUrl(url){
+    const results = await fetch(`${url}`)
+    return await results.json()
+}
+
 export async function getEpisodesPage(page) {
     const results = await fetch(`https://rickandmortyapi.com/api/episode?page=${page}`)
     return await results.json()
@@ -20,5 +25,10 @@ export async function getEpisodeByUrl(url){
 
 export async function getLocationsPage(page) {
     const results = await fetch(`https://rickandmortyapi.com/api/location?page=${page}`)
+    return await results.json()
+}
+
+export async function getLocationById(id) {
+    const results = await fetch(`https://rickandmortyapi.com/api/location/${id}`)
     return await results.json()
 }

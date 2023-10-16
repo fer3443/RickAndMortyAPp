@@ -9,7 +9,7 @@ import { Loader } from "../loader/Loader";
 import { Footer } from "../footer/Footer";
 import { LoaderProvider } from "../../context/LoaderContext";
 
-import { getCharacterById, getEpisodeByUrl } from "../../services/ApiService";
+import { getCharacterById } from "../../services/ApiService";
 
 import "../charactersDetails/CharactersDetails.css";
 
@@ -73,9 +73,14 @@ export const CharactersDetails = () => {
                 <p>Origen: Desconocido</p>
               )}
               <p className="detailCreation">
-                Creacion del personaje: <br/>
-                <span>{character.created}</span>
+                <span>Creado:</span> {character.created}
               </p>
+              {character.location ? (
+                <p><span>Ubicación:</span> {character.location.name}</p>
+              ) : (
+                <p>Ubicación: Desconocido</p>
+              )}
+              <p><span>ID del personaje:</span> {character.id}</p>
             </div>
             <Accordion data-bs-theme="dark">
               <Accordion.Item eventKey="0">

@@ -2,6 +2,7 @@ import React from 'react'
 import Table from "react-bootstrap/Table";
 
 import '../locationsTable/LocationsTable.css'
+import { Link } from 'react-router-dom';
 export const LocationsTable = ({location}) => {
 
   return (
@@ -24,7 +25,7 @@ export const LocationsTable = ({location}) => {
 							<td>{item.name}</td>
 							<td>{item.type}</td>
 							<td>{item.dimension}</td>
-							<td><button className='buttonYw2'>ver mas</button></td>
+							<td><Link to={`/locations/${item.id}`} className='buttonYw2'>ver mas</Link></td>
 						</tr>)
 					})
 				}

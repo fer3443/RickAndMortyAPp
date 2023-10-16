@@ -11,6 +11,7 @@ import { LoaderContext } from "./context/LoaderContext";
 
 
 import "./App.css";
+import LocationsPageDetail from "./pages/LocationsPageDetail";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/characters/:id" element={<CharacterPageDetail/>}/>
             <Route path="/episodes" element={<EpisodePage />} />
             <Route path="/locations" element={<LocationPage />} />
+            <Route path="/locations/:id" element={<LocationsPageDetail/>} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>

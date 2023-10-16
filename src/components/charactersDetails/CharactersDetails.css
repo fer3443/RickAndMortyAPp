@@ -70,6 +70,10 @@
  margin-bottom: 15px;
  font-weight: 700;
 }
+.detailsBody h4:hover{
+  color: #f7ce18;
+  cursor: pointer;
+}
 .detailCreation span{
   font-size: 0.8rem;
 }
