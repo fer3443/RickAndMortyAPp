@@ -8,6 +8,11 @@
   display: flex;
   justify-content: space-between;
   margin: 1.2rem;
+  transition: filter 0.1s ease-in-out;
+}
+.cardContainer:hover {
+  filter: drop-shadow(0 0 1rem #A2FFCE);
+  transition: all 0.2s ease-in-out;
 }
 .cardContainer figure {
   width: 50%;

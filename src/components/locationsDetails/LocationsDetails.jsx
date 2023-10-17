@@ -4,9 +4,9 @@ import { getCharacterById, getLocationById } from "../../services/ApiService";
 import { LoaderProvider } from "../../context/LoaderContext";
 import { Loader } from "../loader/Loader";
 import {Footer} from "../footer/Footer"
+import { LocationsDetailsCharacters } from "./LocationsDetailsCharacters";
 
 import "../locationsDetails/LocationsDetails.css";
-import { LocationsDetailsCharacters } from "./LocationsDetailsCharacters";
 export const LocationsDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();

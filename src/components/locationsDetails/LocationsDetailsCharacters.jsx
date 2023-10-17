@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   getCharactersByUrl,
 } from "../../services/ApiService";
@@ -54,6 +55,7 @@ export const LocationsDetailsCharacters = ({ personajes }) => {
           return (
             <div key={index} className="cardContainerDetailLc">
               <p>{count} -</p>
+              <Link to={`/characters/${item.id}`} className="linkCharacterDetail">
               <div className="nameStatus">
                 <h5>{item.name}</h5>
                 <h6>
@@ -67,6 +69,7 @@ export const LocationsDetailsCharacters = ({ personajes }) => {
                   {item.status}
                 </h6>
               </div>
+              </Link>
               <img src={item.image} alt="" className="imgLocationDetail" />
             </div>
           );
