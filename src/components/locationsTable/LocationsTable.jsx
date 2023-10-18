@@ -8,11 +8,11 @@ export const LocationsTable = ({ location }) => {
     <Table striped bordered hover variant="dark" responsive>
       <thead>
         <tr>
-          <th>#</th>
-          <th>Nombre</th>
-          <th>Tipo</th>
-          <th>Dimension</th>
-          <th>Residentes</th>
+          <th><p className="thColor">#</p></th>
+          <th><p className="thColor">Nombre</p></th>
+          <th><p className="thColor">Tipo</p></th>
+          <th><p className="thColor">Dimension</p></th>
+          <th><p className="thColor">Residentes</p></th>
         </tr>
       </thead>
       <tbody>

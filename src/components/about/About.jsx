@@ -1,11 +1,11 @@
 import React, {useState}from "react";
 
 import { motion } from "framer-motion";
-
+import pepinilloRick from "../../assets/pepinillo-rick.png"
 import { Footer } from "../footer/Footer";
+import { Loader } from "../loader/Loader";
 
 import "../about/About.css";
-import { Loader } from "../loader/Loader";
 export const About = () => {
   const [loading, setLoading] = useState(true);
 
@@ -27,7 +27,7 @@ export const About = () => {
               más. Asi como también informacion sobre temporadas y episodios.
             </p>
             <motion.div initial={{scale: 0, x: 150}} transition={{delay:.5}} animate={{scale:1, x: 0}}>
-            <img src="src/assets/pepinillo-rick.png" alt="" />
+            <img src={pepinilloRick} alt="" />
             </motion.div>
           </div>
         </article>

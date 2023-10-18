@@ -2,3 +2,10 @@
     text-decoration: none;
     color: #000;
 }
+.thColor {
+    color: #ffffff;
+    filter: drop-shadow(0 0 1px #f7ce18);
+    text-align: center;
+    height: 20px;
+    margin: 0;
+}

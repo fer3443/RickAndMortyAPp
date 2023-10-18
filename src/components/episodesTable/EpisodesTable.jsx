@@ -6,7 +6,7 @@ import "../episodesTable/EpisodesTable.css";
 
 export const EpisodesTable = ({episode}) => {
   return (
-    <Table striped bordered hover variant="dark" responsive >
+    <Table striped bordered hover variant="dark" responsive>
     <thead className="container-fluid">
       <tr>
         <th>#</th>
