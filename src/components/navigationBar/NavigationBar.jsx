@@ -6,7 +6,7 @@ import "../navigationBar/NavigationBar.css";
 
 const NavigationBar = () => {
   const [show, setShow] = useState(false);
-  const handleShow = () => setShow(!show)
+  
   const [ scrolling, setScrolling] = useState(false);
 
   function handleBg(){
@@ -22,7 +22,9 @@ const NavigationBar = () => {
         <div className="boxBtnBurger">
           <button
             className="btnBurger"
-            onClick={handleShow}
+            onClick={() => {
+              setShow(!show)
+            }}
           >
             <box-icon name="menu" color="#f7ce18" size="md"></box-icon>
           </button>
@@ -38,7 +40,9 @@ const NavigationBar = () => {
             animation="flashing-hover"
             size="md"
           ></box-icon>
-          <Link to={"/"} className={"navLink"} onClick={handleShow}>
+          <Link to={"/"} className={"navLink"} onClick={() => {
+              setShow(!show)
+            }}>
             Inicio
           </Link>
         </div>
@@ -51,7 +55,9 @@ const NavigationBar = () => {
           ></box-icon>
           <Link
             to={"/characters"}
-            className={"navLink"} onClick={handleShow}
+            className={"navLink"} onClick={() => {
+              setShow(!show)
+            }}
           >
             Personajes
           </Link>
@@ -65,7 +71,9 @@ const NavigationBar = () => {
           ></box-icon>
           <Link
             to={"/episodes"}
-            className={"navLink"} onClick={handleShow}
+            className={"navLink"} onClick={() => {
+              setShow(!show)
+            }}
           >
             Episodios
           </Link>
@@ -79,7 +87,9 @@ const NavigationBar = () => {
           ></box-icon>
           <Link
             to={"/locations"}
-            className={"navLink"} onClick={handleShow}
+            className={"navLink"} onClick={() => {
+              setShow(!show)
+            }}
           >
             Ubicaciones
           </Link>
@@ -91,7 +101,9 @@ const NavigationBar = () => {
             animation="flashing-hover"
             size="md"
           ></box-icon>
-          <Link to={"/about"} className={"navLink"} onClick={handleShow}>
+          <Link to={"/about"} className={"navLink"} onClick={() => {
+              setShow(!show)
+            }}>
             Acerca de
           </Link>
         </div>
