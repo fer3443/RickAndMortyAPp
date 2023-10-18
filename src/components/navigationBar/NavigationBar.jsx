@@ -5,7 +5,7 @@ import rickLogo from '../../assets/RyM-logo.png';
 import "../navigationBar/NavigationBar.css";
 
 const NavigationBar = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   
   const [ scrolling, setScrolling] = useState(false);
 
