@@ -19,6 +19,16 @@
   font-weight: normal;
   padding: 1rem 0;
 }
+.inputCheck {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.inputCheck label {
+  font-weight: 700;
+  filter: drop-shadow(0 0 .3rem #A2FFCE);
+}
 @media(320px <= width <= 768px){
   .characterContainer {
     padding: 6rem 0.5rem 0;
