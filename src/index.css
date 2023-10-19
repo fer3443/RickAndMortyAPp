@@ -7,7 +7,7 @@ body {
 }
 .buttonYw {
   background-color: transparent;
-  border: 1px solid #f7ce18;
+  border: 1px solid #18f77c;
   border-radius: 5px;
   color: #fff;
   margin: 5px;
@@ -16,12 +16,12 @@ body {
   transition: background-color 0.2s ease-in-out;
 }
 .buttonYw:hover {
-  background-color: #f7ce18;
+  background-color: #18f77c;
   color: #464646;
   transition: all 0.2s ease-in-out;
 }
 .buttonYw2 {
-  background-color: #f7ce18;
+  background-color: #18f77c;
   border: none;
   border-radius: 5px;
   color: #111;
@@ -31,7 +31,7 @@ body {
   text-decoration: none;
 }
 .buttonYw2:hover {
-  background-color: #d9ff00;
+  background-color: #18f77c;
   color: #111;
   transition: all 0.2s ease-in-out;
 }

@@ -93,10 +93,16 @@
 .cardSectionLinks {
     text-decoration: none;
     color: #000;
-    background-color: #f7ce18;
+    background-color: #18f77c;
     padding: 5px 10px;
     border-radius: 5px;
     font-weight: 600;
+}
+.cardSectionLinks:hover {
+    background-color: transparent;
+    border:1px solid #18f77c;
+    color: #fff;
+    transition: all 0.2s ease;
 }
 .sectionDivisor {
     width: 100%;

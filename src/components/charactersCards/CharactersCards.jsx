@@ -12,23 +12,31 @@ export const CharactersCards = ({ character }) => {
             animate={{ x: 0, scale: 1 }}
             key={index}
           >
-            <div className="cardContainer">
-              <figure>
-                <img
-                  className="cardImage"
-                  src={item.image}
-                  alt={item.name}
-                  title={item.name}
-                />
-              </figure>
-              <div className="cardBody">
+            <div className="borderColor">
+              <div className="cardContainer">
+                <figure>
+                  <img
+                    className="cardImage"
+                    src={item.image}
+                    alt={item.name}
+                    title={item.name}
+                  />
+                </figure>
+                  <motion.div
+                    initial={{ opacity: 0, y: "-100%" }}
+                    animate={{ opacity: 1, y: 0, duration: 0.9}}
+                  >
+                <div className="cardBody">
                 <h5>{item.name}</h5>
-                <p>Estado: {item.status}</p>
-                <p>Genero: {item.gender}</p>
-                <p>Especie: {item.species}</p>
-                <Link to={`/characters/${item.id}`} className="buttonYw">
-                  ver mas
-                </Link>
+                    <p>Estado: {item.status}</p>
+                    <p>Genero: {item.gender}</p>
+                    <p>Especie: {item.species}</p>
+                   
+                  <Link to={`/characters/${item.id}`} className="buttonYw">
+                    ver mas
+                  </Link>
+                </div>
+                  </motion.div>
               </div>
             </div>
           </motion.div>

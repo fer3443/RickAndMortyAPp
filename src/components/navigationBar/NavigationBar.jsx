@@ -26,7 +26,7 @@ const NavigationBar = () => {
               setShow(!show)
             }}
           >
-            <box-icon name="menu" color="#f7ce18" size="md"></box-icon>
+            <box-icon name="menu" color="#18f77c" size="md"></box-icon>
           </button>
         </div>
         <div>
@@ -36,7 +36,7 @@ const NavigationBar = () => {
         <div className={"boxLink"}>
           <box-icon
             name="home-alt-2"
-            color="#f7ce18"
+            color="#18f77c"
             animation="flashing-hover"
             size="md"
           ></box-icon>
@@ -49,7 +49,7 @@ const NavigationBar = () => {
         <div className={"boxLink"}>
           <box-icon
             name="user-pin"
-            color="#f7ce18"
+            color="#18f77c"
             animation="flashing-hover"
             size="md"
           ></box-icon>
@@ -65,7 +65,7 @@ const NavigationBar = () => {
         <div className={"boxLink"}>
           <box-icon
             name="tv"
-            color="#f7ce18"
+            color="#18f77c"
             animation="flashing-hover"
             size="md"
           ></box-icon>
@@ -81,7 +81,7 @@ const NavigationBar = () => {
         <div className={"boxLink"}>
           <box-icon
             name="current-location"
-            color="#f7ce18"
+            color="#18f77c"
             animation="flashing-hover"
             size="md"
           ></box-icon>
@@ -97,7 +97,7 @@ const NavigationBar = () => {
         <div className={"boxLink"}>
           <box-icon
             name="code"
-            color="#f7ce18"
+            color="#18f77c"
             animation="flashing-hover"
             size="md"
           ></box-icon>
