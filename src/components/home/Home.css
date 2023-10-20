@@ -184,3 +184,8 @@
         width: 300px;
     }
 }
+@media (min-width: 1024px){
+    .cardSection-section {
+        height: 65vh;
+    }
+}

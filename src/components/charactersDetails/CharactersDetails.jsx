@@ -34,11 +34,10 @@ export const CharactersDetails = () => {
       })
       .catch((err) => console.log(err))
       .finally(() => {
-        setLoading(false)
+        setLoading(false);
       });
   }, []);
 
-  
   return (
     <>
       {loading ? (
@@ -53,46 +52,58 @@ export const CharactersDetails = () => {
               volver
             </button>
           </div>
-          <div className="detailsCard">
-            <motion.div
-              animate={{ x: 0, scale: [0, 1, 0.9, 1] }}
-              transition={{ delay: 0.5 }}
-            >
-              <figure>
-                <img className="detailImg" src={character.image} alt="" />
-              </figure>
-            </motion.div>
-            <div className="detailsBody">
-              <h4>{character.name}</h4>
-              <p><span>Estado:</span> {character.status}</p>
-              <p><span>Genero:</span> {character.gender}</p>
-              <p><span>Especie:</span> {character.species}</p>
-              {character.origin ? (
-                <p><span>Origen:</span> {character.origin.name}</p>
-              ) : (
-                <p>Origen: Desconocido</p>
-              )}
-              <p className="detailCreation">
-                <span>Creado:</span> {character.created}
-              </p>
-              {character.location ? (
-                <p><span>Ubicación:</span> {character.location.name}</p>
-              ) : (
-                <p>Ubicación: Desconocido</p>
-              )}
-              <p><span>ID del personaje:</span> {character.id}</p>
+            <div className="detailsCard">
+              <motion.div
+                animate={{ x: 0, scale: [0, 1, 0.9, 1] }}
+                transition={{ delay: 0.5 }}
+              >
+                <figure>
+                  <img className="detailImg" src={character.image} alt="" />
+                </figure>
+              </motion.div>
+              <div className="detailsBody">
+                <h4>{character.name}</h4>
+                <p>
+                  <span>Estado:</span> {character.status}
+                </p>
+                <p>
+                  <span>Genero:</span> {character.gender}
+                </p>
+                <p>
+                  <span>Especie:</span> {character.species}
+                </p>
+                {character.origin ? (
+                  <p>
+                    <span>Origen:</span> {character.origin.name}
+                  </p>
+                ) : (
+                  <p>Origen: Desconocido</p>
+                )}
+                <p className="detailCreation">
+                  <span>Creado:</span> {character.created}
+                </p>
+                {character.location ? (
+                  <p>
+                    <span>Ubicación:</span> {character.location.name}
+                  </p>
+                ) : (
+                  <p>Ubicación: Desconocido</p>
+                )}
+                <p>
+                  <span>ID del personaje:</span> {character.id}
+                </p>
+              </div>
+              <Accordion data-bs-theme="dark">
+                <Accordion.Item eventKey="0">
+                  <Accordion.Header className="detailAccordion">
+                    Episodios en los que participa:
+                  </Accordion.Header>
+                  <Accordion.Body>
+                    <CharacterDetailEpisodes episodes={episodes} />
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
             </div>
-            <Accordion data-bs-theme="dark">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header className="detailAccordion">
-                  Episodios en los que participa:
-                </Accordion.Header>
-                <Accordion.Body>
-                  <CharacterDetailEpisodes episodes={episodes} />
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-          </div>
           <Footer />
         </div>
       )}

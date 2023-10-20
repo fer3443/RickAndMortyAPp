@@ -21,14 +21,14 @@
 }
 .btnBack {
   background-color: transparent;
-  border: 1px solid #f7ce18;
+  border: 1px solid var(--color-para-boton);
   border-radius: 5px;
   color: #fff;
  
   padding: 4px 12px;
 }
 .btnBack:hover {
-  background-color: #f7ce18;
+  background-color: var(--color-para-boton);
   color: #111;
   box-shadow: 0 0 0.5rem #A2FFCE;
   transition: all 0.2s ease-in-out;

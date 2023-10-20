@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,700;1,300;1,400;1,700&display=swap');
+:root {
+  --color-para-boton: #17d6a6;
+}
 html {
   font-family: 'Mulish', sans-serif;
 }
@@ -7,7 +10,7 @@ body {
 }
 .buttonYw {
   background-color: transparent;
-  border: 1px solid #18f77c;
+  border: 1px solid var(--color-para-boton);
   border-radius: 5px;
   color: #fff;
   margin: 5px;
@@ -16,12 +19,12 @@ body {
   transition: background-color 0.2s ease-in-out;
 }
 .buttonYw:hover {
-  background-color: #18f77c;
+  background-color: var(--color-para-boton);
   color: #464646;
   transition: all 0.2s ease-in-out;
 }
 .buttonYw2 {
-  background-color: #18f77c;
+  background-color: var(--color-para-boton);
   border: none;
   border-radius: 5px;
   color: #111;
@@ -31,7 +34,7 @@ body {
   text-decoration: none;
 }
 .buttonYw2:hover {
-  background-color: #18f77c;
+  background-color: var(--color-para-boton);
   color: #111;
   transition: all 0.2s ease-in-out;
 }

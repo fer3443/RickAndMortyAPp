@@ -4,7 +4,7 @@
 }
 .thColor {
     color: #ffffff;
-    filter: drop-shadow(0 0 1px #f7ce18);
+    filter: drop-shadow(0 0 1px var(--color-para-boton));
     text-align: center;
     height: 20px;
     margin: 0;
