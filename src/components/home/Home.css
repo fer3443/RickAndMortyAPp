@@ -1,191 +1,189 @@
+.grid {
+  display: grid;
+}
+.section {
+  margin-block: 4rem 1rem;
+}
+.container {
+  margin-inline: 1.5rem;
+}
+.mainContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-image: linear-gradient(to bottom, #000, #2f2f2f);
+}
 .homeContainer {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: 6rem 1rem 0;
-    color: #fff;
-    background-image: linear-gradient(to bottom, #000, #2F2F2F);
+  place-items: center;
+  row-gap: 1.5rem;
 }
-.logoHome {
-    position: relative;
-    width: 380px;
-    top: -60px;
-    left: calc(50% - 200px);
-    filter: drop-shadow( 0 0 .5rem #A2FFCE);
+.home-logo {
+  width: 380px;
 }
-.homeSection {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 50%;
-    padding: 0 2rem;
+.img-Logo {
+  width: 100%;
+  filter: drop-shadow(0 0 0.5rem #a2ffce);
 }
-.homeSection h1{
-    border-bottom: 1px solid #fff;
-    font-weight: 500;
-    width: 100%;
+.homeTitle span {
+  color: #18f77c;
 }
-.homeSection h6 {
-    font-weight: normal;
+.homeTitle:hover {
+  filter: drop-shadow(0 0 0.5rem #a2ffce);
+  transition: all 0.3s;
 }
+.homeSubtitle {
+  font-size: 1.25rem;
+  text-align: center;
+}
+/* Card Section */
 .cardSection {
-    width: 100%;
-    height: auto;
-    margin: 1rem 0;
+  width: 100%;
+  height: 100%;
 }
-.cardSection-Header {
-    position: relative;
-    width: 100%;
-    height: 40px;
-    margin: 15px 0;
-    border-top: 1px solid #fff;
-    display: flex;
-    justify-content: center;
+.box-title {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  margin: 15px 0;
+  border-top: 1px solid #fff;
+  display: flex;
+  justify-content: center;
 }
-.cardSection-Header h2 {
-    position: absolute;
-    top: -25px;
-    width: auto;
-    background-color: #0c0c0c;
-    padding: 0 1.5rem;
+.card-title, .trailer-title {
+  position: absolute;
+  top: -25px;
+  width: 100%;
+  background-color: #0c0c0c;
+  padding: 0 1.5rem;
 }
-.cardSection-section {
-    position: relative;
-    width: 100%;
-    height: 75vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card-section-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
-.cardSection .cardCharacter, .cardEpisode, .cardLocation {
-    width: 25%;
-    height: 100%;
-    margin: 0 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 2px 5px rgba(250, 250, 250, 0.5);
-    border-radius: 5px;
+.card-box {
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  column-gap: 1.5rem;
 }
-.cardCharacter img, .cardEpisode img, .cardLocation img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.cardCharacter,
+.cardEpisode,
+.cardLocation {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(250, 250, 250, 0.5);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.cardCharacter img,
+.cardEpisode img,
+.cardLocation img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  margin-block: 0 1rem;
 }
 .cardParraph {
-    width: 100%;
-    padding: 0 1.5rem;
+  height: 100%;
+  width: 100%;
+  padding: 0 1.5rem;
 }
 .cardParraph h5 {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .seeMore {
-    height: 12%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 1.5rem;
-    margin-bottom: .5rem;
+  height: 12%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  margin-bottom: 0.5rem;
 }
 .cardSectionLinks {
-    text-decoration: none;
-    color: #000;
-    background-color: #18f77c;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: 600;
+  text-decoration: none;
+  color: #000;
+  background-color: #18f77c;
+  border: 1px solid #18f77c;
+  padding: .4rem .6rem;
+  border-radius: 5px;
+  font-weight: 600;
 }
 .cardSectionLinks:hover {
-    background-color: transparent;
-    border:1px solid #18f77c;
-    color: #fff;
-    transition: all 0.2s ease;
+  background-color: transparent;
+  border: 1px solid #18f77c;
+  color: #fff;
+  transition: all 0.2s ease;
 }
 .sectionDivisor {
-    width: 100%;
-    height: 60vh;
-    overflow: hidden;
-    margin: 1rem 0;
-    background: url("../../assets/imgLocations.jpg") no-repeat center;
-    background-size: cover;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  margin: 1rem 0;
+  background: url("../../assets/imgLocations.jpg") no-repeat center;
+  background-size: cover;
 }
-.sectionTrailers {
-    width: 100%;
-    height: auto;
-    margin: 1.5rem 0;
-}
-.headerTrailers {
-    position: relative;
-    width: 100%;
-    height: 40px;
-    margin: 15px 0;
-    border-top: 1px solid #fff;
-    display: flex;
-    justify-content: center;
-}
-.headerTrailers h2 {
-    position: absolute;
-    top: -25px;
-    width: auto;
-    background-color: #1d1d1d;
-    padding: 0 1.5rem;
+/* Section Trailers */
+.trailer-title {
+  background-color: #1a1a1a;
 }
 .trailersContainer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+  place-items: center;
+  row-gap: 1.5rem;
 }
 .trailersContainer iframe:hover {
-    box-shadow: 0 0 1rem #A2FFCE;
-    transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 1rem #a2ffce;
+  transition: all 0.3s ease-in-out;
 }
-.trailersBox h6{
-    text-align: center;
-    margin-bottom: 10px;
+.trailers-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.5rem;
 }
-@media(320px <= width <= 768px) {
-    .homeContainer {
-        padding: 6rem 0.5rem 0;
-    }
-    .logoHome {
-        top: 0;
-        left: calc(50% - 150px);
-        width: 300px;
-    }
-    .homeSection {
-        width: 100%;
-        margin-top: 10px;
-        padding: 0 10px;
-        justify-content: center;
-    }
-    .cardSection-section {
-        display: flex;
-        flex-direction: column;
-        height: auto;
-    }
-    .cardSection .cardCharacter, .cardEpisode, .cardLocation {
-        width: 100%;
-        margin: 1rem;
-    }
-    .cardSection-Header h2 {
-        background-color: #000;
-        top: -20px;
-    }
-    .headerTrailers h2 {
-        background-color: #1a1a1a;
-        padding: 5px;
-    }
-    .trailersContainer iframe {
-        width: 300px;
-    }
+.trailersBox h6 {
+  text-align: center;
+  margin-bottom: 10px;
 }
-@media (min-width: 1024px){
-    .cardSection-section {
-        height: 65vh;
-    }
+@media screen and (min-width: 320px) {
+  .container {
+    margin-inline: 1rem;
+  }
+ 
+  .home {
+    padding-top: 1rem;
+  }
+  .home-logo {
+    width: 280px;
+  }
+  .card-box, .trailers-content {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  .trailers-content iframe {
+    width: 290px;
+  }
 }
+@media screen and (min-width:576px) {
+  .home-logo {
+    width: 380px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card-box, .trailers-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px){
+  .card-box, .trailers-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .trailers-content iframe {
+    width: 360px;
+  }
+}
+
