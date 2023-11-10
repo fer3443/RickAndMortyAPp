@@ -131,6 +131,7 @@
 /* Section Trailers */
 .trailer-title {
   background-color: #1a1a1a;
+  text-align: center;
 }
 .trailersContainer {
   place-items: center;
@@ -180,10 +181,17 @@
 }
 @media screen and (min-width: 1024px){
   .card-box, .trailers-content {
-    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    place-items: center;
+    grid-template-columns: fill;
   }
   .trailers-content iframe {
     width: 360px;
   }
 }
-
+@media screen and (min-width: 1440px) {
+  .card-box, .trailers-content {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
