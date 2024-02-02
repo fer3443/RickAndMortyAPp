@@ -36,6 +36,12 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 ## Instalación y Uso
 
 1. Clona este repositorio.
-  [ git clone https://github.com/TuUsuario/TuRepositorio.git](https://github.com/fer3443/RickAndMortyAPp.git)https://github.com/fer3443/RickAndMortyAPp.git
   ```bash
    git clone https://github.com/fer3443/RickAndMortyAPp.git
+```
+2. Instala las dependencias.
+   ```bash
+   npm install
+3. Inicia la aplicacion.
+   ```bash
+   npm run dev
