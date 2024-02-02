@@ -55,9 +55,10 @@
 .card-title, .trailer-title {
   position: absolute;
   top: -25px;
-  width: 100%;
+  width: auto;
   background-color: #0c0c0c;
   padding: 0 1.5rem;
+  text-align: center;
 }
 .card-section-content {
   display: flex;
@@ -66,7 +67,7 @@
   height: 100%;
 }
 .card-box {
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-template-columns: 1fr;
   column-gap: 1.5rem;
 }
 .cardCharacter,
@@ -131,7 +132,6 @@
 /* Section Trailers */
 .trailer-title {
   background-color: #1a1a1a;
-  text-align: center;
 }
 .trailersContainer {
   place-items: center;
@@ -180,6 +180,10 @@
   }
 }
 @media screen and (min-width: 1024px){
+  .card-box {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+
+  }
   .card-box, .trailers-content {
     width: 100%;
     place-items: center;
