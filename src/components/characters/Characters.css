@@ -15,7 +15,7 @@
   display: grid;
   place-items: center;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  row-gap: 3rem;
 }
 .characterHeader h3 {
   font-weight: normal;

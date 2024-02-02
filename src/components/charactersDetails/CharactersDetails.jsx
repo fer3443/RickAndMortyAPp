@@ -31,13 +31,14 @@ export const CharactersDetails = () => {
       .then((res) => {
         setCharacter(res);
         setEpisodes(res.episode);
+        setLoading(false);
       })
       .catch((err) => console.log(err))
-      .finally(() => {
-        setLoading(false);
-      });
   }, []);
-
+  function formatedDate(item){
+    const fecha = new Date(item).toLocaleString()
+    return fecha
+  }
   return (
     <>
       {loading ? (
@@ -80,7 +81,7 @@ export const CharactersDetails = () => {
                   <p>Origen: Desconocido</p>
                 )}
                 <p className="detailCreation">
-                  <span>Creado:</span> {character.created}
+                  <span>Creado:</span> {formatedDate(character.created)}
                 </p>
                 {character.location ? (
                   <p>
