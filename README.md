@@ -1,6 +1,6 @@
 # Rick and Morty App
 
-![Rick and Morty App Logo]([path/to/your/logo.png](https://fer-rick-and-morty-app.netlify.app/assets/RyM-logo-11783ee8.png))
+![Rick and Morty App Logo](src/assets/RyM-logo.png)
 
 ## Descripción del Proyecto
 
