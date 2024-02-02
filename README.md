@@ -36,5 +36,6 @@ Si deseas contribuir a este proyecto, sigue estos pasos:
 ## Instalación y Uso
 
 1. Clona este repositorio.
-   ```bash
   [ git clone https://github.com/TuUsuario/TuRepositorio.git](https://github.com/fer3443/RickAndMortyAPp.git)https://github.com/fer3443/RickAndMortyAPp.git
+  ```bash
+   git clone https://github.com/fer3443/RickAndMortyAPp.git
